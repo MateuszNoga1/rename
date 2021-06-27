@@ -1,0 +1,54 @@
+@use 'custom' as *;
+
+.about-text {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: blue;
+    left: calc(50% - 25px);
+    bottom: 1px;
+  }
+}
+.about-description {
+  font-size: 1.3rem;
+}
+.about-list {
+  display: table;
+  margin: auto;
+  text-align: left;
+  list-style-type: none;
+  li {
+    font-size: 1.2rem;
+  }
+}
+.about-long {
+  font-size: 1.2rem;
+}
+
+.btn-outline-info:hover {
+  color: white;
+}
+
+.section-three {
+  background-color: $primaryBackground;
+}

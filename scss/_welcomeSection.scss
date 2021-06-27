@@ -1,0 +1,85 @@
+@use 'custom' as *;
+#welcomeSection {
+  font-size: 3rem;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  background-color: $primary;
+  min-height: 100vh;
+  color: white;
+  .spanNav {
+    font-size: 2rem;
+  }
+  img {
+    width: 5rem;
+    height: auto;
+  }
+  h3 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $secondary;
+  }
+  .btn-play {
+    color: white;
+    &:hover {
+      i {
+        color: aquamarine;
+      }
+    }
+  }
+  .btn-play,
+  .btn-danger {
+    font-size: 2rem;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  #welcomeSection {
+    img {
+      width: 15rem;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  #welcomeSection {
+    img {
+      width: 30rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .btn-danger,
+  .btn-play {
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes upDownImage {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+.topImg {
+  animation-name: zoomImg;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomImg {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

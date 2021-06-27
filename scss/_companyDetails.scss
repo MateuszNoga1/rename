@@ -1,0 +1,12 @@
+@use 'custom' as *;
+
+.section-four {
+  h3 {
+    color: $primary;
+  }
+  img {
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+}
